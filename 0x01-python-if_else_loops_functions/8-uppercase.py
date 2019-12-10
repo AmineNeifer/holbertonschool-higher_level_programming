@@ -6,4 +6,4 @@ def uppercase(str):
         else:
             n = ord(str[i])
         print(chr(n), end="")
-    print()
+    print("")
