@@ -9,7 +9,7 @@ int palindrome(int *t, int len);
 int is_palindrome(listint_t **head)
 {
   listint_t *current = *head;
-  int z, i = 0, t[50];
+  int i = 0, t[50];
   if (*head == NULL || (*head)->next == NULL)
     return (1);
   while (current)
@@ -17,10 +17,6 @@ int is_palindrome(listint_t **head)
       t[i] = current->n;
       i++;
       current = current->next;
-    }
-  for (z = 0; z < i; z++)
-    {
-      printf("test test t[%d] = %d \n",z ,t[z]);
     }
   return (palindrome(t, i - 1));
 }
