@@ -4,10 +4,10 @@ def roman_to_int(roman_string):
     numerals = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500}
     numerals.update(ad)
     result = 0
-    if roman_string:
+    if type(roman_string) == str:
         for i in range(len(roman_string)):
             if roman_string[i] not in numerals:
-                return (None)
+                return (0)
             if i < len(roman_string) - 1:
                 i2 = numerals[roman_string[i+1]]
                 i1 = numerals[roman_string[i]]
