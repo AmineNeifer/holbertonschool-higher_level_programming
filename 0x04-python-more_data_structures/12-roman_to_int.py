@@ -6,6 +6,8 @@ def roman_to_int(roman_string):
     result = 0
     if roman_string:
         for i in range(len(roman_string)):
+            if roman_string[i] not in numerals:
+                return (None)
             if i < len(roman_string) - 1:
                 i2 = numerals[roman_string[i+1]]
                 i1 = numerals[roman_string[i]]
