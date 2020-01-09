@@ -8,6 +8,7 @@ def safe_print_list(my_list=[], x=0):
         if t > 0:
             print()
     except:
-        print()
+        if t > 0:
+            print()
         return(t)
     return(t)
