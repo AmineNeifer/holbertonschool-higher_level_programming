@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-""" add_integer is a function that takes 
+""" add_integer is a function that takes
     two arguments a and b that must be integer or float
     and calculates their sum"""
+
+
 def add_integer(a, b=98):
     """Args: a: int or float
              b: int or float

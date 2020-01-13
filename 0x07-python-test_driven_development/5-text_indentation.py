@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ contains a function that manages a text indentation."""
+
+
 def text_indentation(text):
     """Args: text.
 

@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ contains only one function that prints squares out of hashes. """
+
+
 def print_square(size):
     """Args:
         size: integer type.
