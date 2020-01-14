@@ -50,7 +50,7 @@ def matrix_mul(m_a, m_b):
                         raise TypeError("m_a should contain \
 only integers or floats")
                     else:
-                        raise TypeError("m_a should contain \
+                        raise TypeError("m_b should contain \
 only integers or floats")
 
     for i in range(len(m_a)):
