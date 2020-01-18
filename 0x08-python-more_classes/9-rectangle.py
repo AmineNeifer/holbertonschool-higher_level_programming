@@ -1,25 +1,26 @@
 #!/usr/bin/python3
 
+
 class Rectangle:
-    
+
     number_of_instances = 0
-    print_symbol ="#"
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
 
         Rectangle.number_of_instances += 1
-    
+
     def __str__(self):
         if 0 in [self.__width, self.__height]:
             return ""
         chain = self.__width * str(self.print_symbol)
         return (chain + "\n") * (self.__height - 1) + chain
-    
+
     def __repr__(self):
         return 'Rectangle({}, {})'.format(self.__width, self.__height)
-    
+
     def __del__(self):
         print("Bye rectangle...")
 
@@ -50,7 +51,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
-    
+
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         if type(rect_1) is not Rectangle:
@@ -68,6 +69,7 @@ class Rectangle:
         cls.__width = size
         cls.__height = size
         return cls(size, size)
+
     def area(self):
         return (self.__height * self.__width)
 
@@ -75,5 +77,3 @@ class Rectangle:
         if 0 in [self.__height, self.__width]:
             return 0
         return (2 * (self.__height + self.__width))
-    
-
