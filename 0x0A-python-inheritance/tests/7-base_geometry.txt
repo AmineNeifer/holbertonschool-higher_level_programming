@@ -30,3 +30,23 @@ TypeError: amine must be an integer
 Traceback (most recent call last):
 ...
 TypeError: amine must be an integer
+>>> bg.integer_validator("my_int", None)
+Traceback (most recent call last):
+...
+TypeError: my_int must be an integer
+>>> bg.integer_validator("my_int", {3,4})
+Traceback (most recent call last):
+...
+TypeError: my_int must be an integer
+>>> bg.integer_validator("my_int", True)
+Traceback (most recent call last):
+...
+TypeError: my_int must be an integer
+>>> bg.integer_validator("my_int", (4,))
+Traceback (most recent call last):
+...
+TypeError: my_int must be an integer
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
