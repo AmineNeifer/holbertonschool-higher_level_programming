@@ -6,11 +6,11 @@ array([[13, 16]])
 >>> print (matrix_mul("amine", [[1, 2], [3, 4]]))
 Traceback (most recent call last):
 ...
-TypeError: ufunc 'multiply' did not contain a loop with signature matching types dtype('<U21') dtype('<U21') dtype('<U21')
+TypeError: m_a must be a list
 >>> print (matrix_mul([[1, 2], [3, 4]], "neifer"))
 Traceback (most recent call last):
 ...
-TypeError: ufunc 'multiply' did not contain a loop with signature matching types dtype('<U21') dtype('<U21') dtype('<U21')
+TypeError: m_b must be a list
 >>> print(matrix_mul([3, 4], [[1, 2], [1, 2]]))
 [ 7 14]
 >>> print (matrix_mul([[1, 2], [1, 2]], [10, 2]))
