@@ -1,0 +1,61 @@
+>>> matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+>>> matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+array([[13, 16]])
+>>> print (matrix_mul([[1, 2]], [[3, 4], [5, 6]]))
+[[13 16]]
+>>> print (matrix_mul("amine", [[1, 2], [3, 4]]))
+Traceback (most recent call last):
+...
+TypeError: ufunc 'multiply' did not contain a loop with signature matching types dtype('<U21') dtype('<U21') dtype('<U21')
+>>> print (matrix_mul([[1, 2], [3, 4]], "neifer"))
+Traceback (most recent call last):
+...
+TypeError: ufunc 'multiply' did not contain a loop with signature matching types dtype('<U21') dtype('<U21') dtype('<U21')
+>>> print(matrix_mul([3, 4], [[1, 2], [1, 2]]))
+[ 7 14]
+>>> print (matrix_mul([[1, 2], [1, 2]], [10, 2]))
+[14 14]
+>>> print (matrix_mul([], [[10, 2]]))
+Traceback (most recent call last):
+...
+ValueError: shapes (0,) and (1,2) not aligned: 0 (dim 0) != 1 (dim 0)
+>>> print (matrix_mul([[]], [[10, 2]]))
+Traceback (most recent call last):
+...
+ValueError: shapes (1,0) and (1,2) not aligned: 0 (dim 1) != 1 (dim 0)
+>>> print (matrix_mul([[10, 2], [10, 10]], []))
+Traceback (most recent call last):
+...
+ValueError: shapes (2,2) and (0,) not aligned: 2 (dim 1) != 0 (dim 0)
+>>> print (matrix_mul([[10, 2], [10, 10]], [[]]))
+Traceback (most recent call last):
+...
+ValueError: shapes (2,2) and (1,0) not aligned: 2 (dim 1) != 1 (dim 0)
+>>> print(matrix_mul([[10, 2], [10, 5]], [[12, 4], ["6", 8]]))
+Traceback (most recent call last):
+...
+ValueError: data type must provide an itemsize
+>>> print(matrix_mul([[10, 2], [10, "AMINE"]], [[12, 4]]))
+Traceback (most recent call last):
+...
+ValueError: shapes (2,2) and (1,2) not aligned: 2 (dim 1) != 1 (dim 0)
+>>> print(matrix_mul([[1, 2], [1, 2]], [[10, "ya"], [2, 10]]))
+Traceback (most recent call last):
+...
+ValueError: data type must provide an itemsize
+>>> print(matrix_mul([[1, 2], [3]], [[1, 2],[3, 4]]))
+[list([1, 2, 3, 3, 3]) list([1, 2, 1, 2, 3, 3, 3, 3])]
+>>> print(matrix_mul([[1, 2], [3, 4]], [[1, 2],[3]]))
+[list([1, 2, 3, 3]) list([1, 2, 1, 2, 1, 2, 3, 3, 3, 3])]
+>>> print (matrix_mul([[1, 2, 5], [3, 4, 6], [6, 7, 10]], [[1, 2],[3, 2]]))
+Traceback (most recent call last):
+...
+ValueError: shapes (3,3) and (2,2) not aligned: 3 (dim 1) != 2 (dim 0)
+>>> print (matrix_mul([[1, 2], [1, 4]]))
+Traceback (most recent call last):
+...
+TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+>>> print (matrix_mul())
+Traceback (most recent call last):
+...
+TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
