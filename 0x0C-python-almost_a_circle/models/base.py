@@ -56,8 +56,9 @@ class Base:
     def load_from_file(cls):
         """ takes a file and creates instances out of it"""
         l = []
+        name = cls.__name__
         try:
-            with open('{}.json'.format(cls.__name__), 'r', encoding="utf-8") as f:
+            with open('{}.json'.format(name), 'r', encoding="utf-8") as f:
                 loaded_str = cls.from_json_string(f.read())
         except:
             return l
