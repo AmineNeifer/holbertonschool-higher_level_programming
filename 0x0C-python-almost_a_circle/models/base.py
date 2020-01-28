@@ -45,7 +45,10 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """ creates list of dictionaries of a json tring"""
-        dummy = cls(1, 1, 1)
+        if cls.__name__ = "Rectangle":
+            dummy = cls(1, 1)
+        else:
+            dummy = cls(1)
         i = [1, 2, 3, None, None]
         for k, v in dictionary.items():
             if k == "id":
