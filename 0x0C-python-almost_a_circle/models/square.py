@@ -1,13 +1,17 @@
 #!/usr/bin/python3
+""" Square: subclass of Rectangle and Base
+
+    dimensions: size, x and y"""
 
 
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
+    """ Square, sbclass of Rectangle where size = height = width"""
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x, y, id)
-    
+
     def __str__(self):
         return "[Square] ({}) {}/{} - \
 {}".format(self.id, self.x, self.y, self.width)
@@ -22,6 +26,7 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
+        """ updates the values of instance"""
         count = 0
         if len(args) != 0:
             for i in args:
@@ -39,6 +44,7 @@ class Square(Rectangle):
                 setattr(self, k, v)
 
     def to_dictionary(self):
+        """ returns a dictionary with all the instances"""
         dicc = {}
         dicc['x'] = self.x
         dicc['y'] = self.y
