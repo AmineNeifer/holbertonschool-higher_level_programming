@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Rectangle: sublcass of Base.
-    
+
     dimensions: width, height, x and y"""
 
 
@@ -8,9 +8,9 @@ from models.base import Base
 
 
 class Rectangle(Base):
-
+    """ Rectangle, subclass of base"""
     def __init__(self, width, height, x=0, y=0, id=None):
-        super().__init__(id)       
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
@@ -41,7 +41,7 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         else:
             self.__height = height
-    
+
     @property
     def x(self):
         return self.__x
@@ -77,14 +77,15 @@ class Rectangle(Base):
         """ prints our rectangle in hashes '#' """
         for i in range(self.__y):
             print()
-        for i in range (self.__height):
-            print (self.__x * " " + self.__width * "#")
+        for i in range(self.__height):
+            print(self.__x * " " + self.__width * "#")
 
     def __str__(self):
         return "[Rectangle] ({}) {}/{} - \
 {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
-    
+
     def update(self, *args, **kwargs):
+        """ updates the values of instance"""
         count = 0
         list = [self.id, self.__width, self.__height, self.__x, self.__y]
         if len(args) != 0:
@@ -114,6 +115,7 @@ class Rectangle(Base):
                     self.id = v
 
     def to_dictionary(self):
+        """ returns a dictionary with all the instances"""
         dicc = {}
         dicc['x'] = self.__x
         dicc['y'] = self.__y
