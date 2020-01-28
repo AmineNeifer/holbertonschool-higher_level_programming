@@ -46,9 +46,9 @@ class Base:
     def create(cls, **dictionary):
         """ creates list of dictionaries of a json tring"""
         if cls.__name__ = "Rectangle":
-            dummy = cls(1, 1)
+            dummy = cls(1, 1, 1)
         else:
-            dummy = cls(1)
+            dummy = cls(1, 1)
         i = [1, 2, 3, None, None]
         for k, v in dictionary.items():
             if k == "id":
