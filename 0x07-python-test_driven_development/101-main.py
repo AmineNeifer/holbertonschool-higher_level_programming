@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+""" Doc """
+lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+m_a = "Holberton"
+m_b = [[5, 6], [7, 8]]
+try:
+    print(lazy_matrix_mul(m_a, m_b))
+except Exception as e:
+    print(e)
