@@ -41,8 +41,8 @@ class Base:
         return json.loads(json_string)
 
     @classmethod
-    """ creates list of dictionaries of a json tring"""
     def create(cls, **dictionary):
+        """ creates list of dictionaries of a json tring"""
         dummy = cls(1, 1, 1)
         i = [1, 2, 3, None, None]
         for k, v in dictionary.items():
