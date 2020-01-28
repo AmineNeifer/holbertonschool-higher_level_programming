@@ -18,12 +18,14 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """ takes an objects and converts it to a json string"""
         if list_dictionaries is not None and len(list_dictionaries) != 0:
             return json.dumps(list_dictionaries)
         return "[]"
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """ takes a json string and writes it in a json file properly"""
         with open('{}.json'.format(cls.__name__), 'w', encoding="utf-8") as f:
             l = []
             for i in list_objs:
@@ -33,11 +35,13 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """ converts contents of a json file to string"""
         if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
 
     @classmethod
+    """ creates list of dictionaries of a json tring"""
     def create(cls, **dictionary):
         dummy = cls(1, 1, 1)
         i = [1, 2, 3, None, None]
@@ -58,6 +62,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """ takes a file and creates instances out of it"""
         with open('{}.json'.format(cls.__name__), 'r', encoding="utf-8") as f:
             loaded_str = cls.from_json_string(f.read())
         l = []
