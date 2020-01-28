@@ -49,20 +49,7 @@ class Base:
             dummy = cls(1, 1, 1)
         else:
             dummy = cls(1, 1)
-        i = [1, 2, 3, None, None]
-        for k, v in dictionary.items():
-            if k == "id":
-                i[0] = v
-            elif k == "width":
-                i[1] = v
-            elif k == "height":
-                i[2] = v
-            elif k == "x":
-                i[3] = v
-            elif k == "y":
-                i[4] = v
-        t = tuple(i)
-        dummy.update(*t)
+        dummy.update(**dictionary)
         return (dummy)
 
     @classmethod
