@@ -3,7 +3,8 @@
 
 
 import json
-
+import turtle
+import random
 
 class Base:
     """ conatins methods to all kinds of geometry shapes"""
@@ -67,3 +68,40 @@ class Base:
             created = cls.create(**i)
             l.append(created)
         return l
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        for i in list_rectangles:
+            rand1 = random.randrange(-350,350)
+            rand2 = random.randrange(-350,350)
+            nok = turtle.Turtle()
+            nok.speed(1)
+            nok.color('yellow', 'red')
+            nok.pensize(10)
+            nok.shape('turtle')
+            nok.penup()
+            nok.setpos(rand1, rand2)
+            nok.pendown()
+            nok.forward(i.width)
+            nok.left(90)
+            nok.forward(i.height)
+            nok.left(90)
+            nok.forward(i.width)
+            nok.left(90)
+            nok.forward(i.height)
+        for i in list_squares:
+            squa = turtle.Turtle()
+            squa.speed(1)
+            squa.pensize(8)
+            squa.shape('turtle')
+            squa.color('green', 'orange')
+            rand1 = random.randrange(-350,350)
+            rand2 = random.randrange(-350,350)
+            squa.penup()
+            squa.setpos(rand1, rand2)
+            squa.pendown()
+            squa.begin_fill()
+            for x in range(4):
+                squa.forward(i.size)
+                squa.left(90)
+            squa.end_fill()
