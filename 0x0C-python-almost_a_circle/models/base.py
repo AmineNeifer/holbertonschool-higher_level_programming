@@ -55,9 +55,13 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """ takes a file and creates instances out of it"""
-        with open('{}.json'.format(cls.__name__), 'r', encoding="utf-8") as f:
-            loaded_str = cls.from_json_string(f.read())
         l = []
+        try:
+            with open('{}.json'.format(cls.__name__), 'r', encoding="utf-8") as f:
+                loaded_str = cls.from_json_string(f.read())
+        except:
+            return l
+
         for i in loaded_str:
             created = cls.create(**i)
             l.append(created)
