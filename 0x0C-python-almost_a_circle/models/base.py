@@ -1,23 +1,27 @@
 #!/usr/bin/python3
 """ Base class is the most super class in this project """
 
+
 import json
 
+
 class Base:
+    """ conatins methods to all kinds of geometry shapes"""
     __nb_objects = 0
+
     def __init__(self, id=None):
         if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-    
+
     @staticmethod
     def to_json_string(list_dictionaries):
         if list_dictionaries is not None and len(list_dictionaries) != 0:
             return json.dumps(list_dictionaries)
         return "[]"
-    
+
     @classmethod
     def save_to_file(cls, list_objs):
         with open('{}.json'.format(cls.__name__), 'w', encoding="utf-8") as f:
@@ -35,9 +39,9 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        dummy = cls(1 , 1, 1)
+        dummy = cls(1, 1, 1)
         i = [1, 2, 3, None, None]
-        for k ,v in dictionary.items():
+        for k, v in dictionary.items():
             if k == "id":
                 i[0] = v
             elif k == "width":
@@ -60,5 +64,4 @@ class Base:
         for i in loaded_str:
             created = cls.create(**i)
             l.append(created)
-        print (loaded_str)
         return l
