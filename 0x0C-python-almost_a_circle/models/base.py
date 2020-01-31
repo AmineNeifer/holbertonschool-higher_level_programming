@@ -6,6 +6,7 @@ import json
 import turtle
 import random
 
+
 class Base:
     """ conatins methods to all kinds of geometry shapes"""
     __nb_objects = 0
@@ -72,8 +73,8 @@ class Base:
     @staticmethod
     def draw(list_rectangles, list_squares):
         for i in list_rectangles:
-            rand1 = random.randrange(-350,350)
-            rand2 = random.randrange(-350,350)
+            rand1 = random.randrange(-350, 350)
+            rand2 = random.randrange(-350, 350)
             nok = turtle.Turtle()
             nok.speed(1)
             nok.color('yellow', 'red')
@@ -95,8 +96,8 @@ class Base:
             squa.pensize(8)
             squa.shape('turtle')
             squa.color('green', 'orange')
-            rand1 = random.randrange(-350,350)
-            rand2 = random.randrange(-350,350)
+            rand1 = random.randrange(-350, 350)
+            rand2 = random.randrange(-350, 350)
             squa.penup()
             squa.setpos(rand1, rand2)
             squa.pendown()
