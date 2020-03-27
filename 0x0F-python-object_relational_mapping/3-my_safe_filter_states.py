@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" lists all states that's name starts with n from a database"""
+""" takes in an arg and lists all values in the states table of
+    hbtn_0e_0_usa where name matches the argument"""
 
 
 if __name__ == "__main__":
