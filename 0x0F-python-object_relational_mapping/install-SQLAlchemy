@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+pip3 install SQLAlchemy==1.2.5
