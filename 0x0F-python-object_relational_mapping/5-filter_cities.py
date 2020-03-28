@@ -16,11 +16,12 @@ if __name__ == "__main__":
     query_rows = cur.fetchall()
     if len(query_rows) == 0:
         print()
-    for i in range(len(query_rows)):
-        if i == len(query_rows) - 1:
-            print(query_rows[i][0])
-        else:
-            print(query_rows[i][0], end=", ")
-        print()
+    else:
+        for i in range(len(query_rows)):
+            if i == len(query_rows) - 1:
+                print(query_rows[i][0])
+            else:
+                print(query_rows[i][0], end=", ")
+            print()
     cur.close()
     con.close()
