@@ -1,4 +1,7 @@
 #!/usr/bin/python
+""" funtion find_peak"""
+
+
 def find_peak(list_of_integers):
     """ find a peak in a list of integers"""
     if list_of_integers == []:
