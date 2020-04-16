@@ -5,8 +5,8 @@ sends a request to the URL and displays the body of the response.
 import sys
 import requests
 if __name__ == "__main__":
-    r = requests.get(sys.argv[1]).text
-    if r[0:5] == "Error":
-        print("Error code:", r[6:])
+    r = requests.get(sys.argv[1])
+    if r.status_code!= 200:
+        print("Error code:", r.status_code)
     else:
-        print(r)
+        print(r.text)
