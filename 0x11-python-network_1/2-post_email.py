@@ -3,8 +3,10 @@
 from urllib import request, parse
 from sys import argv
 if __name__ == "__main__":
-    params = {"email": argv[2]}
-    querystring = parse.urlencode(params)
-    url = sys.argv[1] + "?" + querystring
-    with request.urlopen(url) as resp:
-        print(resp)
+    values = {"email": argv[2]}
+    data = parse.urlencode(values)
+    data = data.encode('utf8')
+    url = argv[1]
+    req = request.Request(url, data)
+    with request.urlopen(req) as response:
+        print(response.read().decode("utf8"))
