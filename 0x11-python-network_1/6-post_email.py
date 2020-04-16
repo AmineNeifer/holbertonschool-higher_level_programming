@@ -3,7 +3,8 @@
 send post request using requests module.
 """
 import requests
+import sys
 if __name__ == "__main__":
-    url = "http://0.0.0.0:5000/post_email"
-    myobj = {"email": "hr@holbertonschool.com"}
+    url = sys.argv[1]
+    myobj = {"email": sys.argv[2]}
     print(requests.post(url, data=myobj).text)
