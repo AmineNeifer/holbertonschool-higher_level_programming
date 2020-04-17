@@ -7,5 +7,5 @@ import sys
 if __name__ == "__main__":
     try:
         print(requests.get(sys.argv[1]).headers["X-Request-Id"])
-    except ValueError:
+    except:
         pass
