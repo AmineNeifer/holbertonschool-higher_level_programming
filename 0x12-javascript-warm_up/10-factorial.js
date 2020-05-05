@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const myArgs = process.argv.slice(2)[0];
-function factorial(a) {
+function factorial (a) {
   if (a === 1 || a === 0) {
     return 1;
   }
