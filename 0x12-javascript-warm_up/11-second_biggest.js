@@ -14,7 +14,7 @@ function secondBiggest (array) {
       max2 = Number(array[i]);
     }
   }
-  return max2;
+  return Number(max2);
 }
 if (isNaN(myArgs[0]) || !myArgs[0] || myArgs.length === 1) {
   console.log(0);
