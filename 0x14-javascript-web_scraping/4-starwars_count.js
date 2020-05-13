@@ -6,7 +6,7 @@ request(url, function (error, response, body) {
     const listFilms = JSON.parse(body).results;
     let num = 0;
     for (const movie of listFilms) {
-      if (movie.characters.includes('https://swapi-api.hbtn.io/api/people/18/')) {
+      if (movie.characters.find(element => element.includes('/api/people/18/'))) {
         num++;
       }
     }
