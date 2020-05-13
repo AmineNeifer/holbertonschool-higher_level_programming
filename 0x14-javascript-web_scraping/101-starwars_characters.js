@@ -8,7 +8,7 @@ request(url, function (error, response, body) {
       const actor = listChar[i];
       request(actor, function (error, response, body) {
         if (error) { console.log(error); } else {
-          console.log(JSON.parse(body).name);
+          console.log(JSON.parse(body));
         }
       });
     }
